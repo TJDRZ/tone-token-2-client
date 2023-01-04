@@ -1,0 +1,16 @@
+.Login > section {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-login {
+    background-color: #efd475;
+}
+
+.toggle-login:hover {
+    background-color: #baa867;
+}

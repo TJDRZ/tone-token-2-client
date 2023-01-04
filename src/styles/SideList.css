@@ -1,0 +1,41 @@
+.SideList {
+  grid-area: SideList;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-right: solid 1px #000;
+}
+
+.SideList-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.SideList-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.SideList-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 1350px) {
+  .SideList-header {
+    flex-direction: row;
+  }
+
+  .SideList-list {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+}

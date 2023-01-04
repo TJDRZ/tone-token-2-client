@@ -1,0 +1,8 @@
+.Move {
+    width: 18rem;
+    height: 3rem;
+}
+
+.Move > button {
+    width: 50%;
+}

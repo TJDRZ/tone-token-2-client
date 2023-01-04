@@ -1,0 +1,54 @@
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.about > * {
+  height: 0.5rem;
+  background-image: linear-gradient(
+    45deg,
+    #bcb499 0%,
+    #baa867 25%,
+    #efd475 100%
+  );
+  border: solid 1px #000;
+  transition: transform 1s ease-out, background-color 1s ease-in;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  color: #ccc;
+  background-color: #333;
+  transition-property: transform, background-color;
+  transition-duration: 2s;
+}
+
+.slide ul {
+  padding: 1rem;
+}
+
+.slide p {
+  position: relative;
+  top: 15rem;
+  color: #ddd;
+}
+
+.slide li:first-child p{
+  color: #baa867;
+}
+
+.website {
+  color: #fada5e;
+}

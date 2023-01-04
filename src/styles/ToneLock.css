@@ -1,0 +1,45 @@
+.ToneLock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.outer-lock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-image: linear-gradient(
+    45deg,
+    #bcb499 0%,
+    #baa867 25%,
+    #efd475 100%
+  );
+  border-radius: 50%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.inner-lock {
+  width: 2rem;
+  height: 2rem;
+  background-image: radial-gradient(#e2cc93 0%, #efd475 100%);
+  border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(9, 9, 9, 0.25);
+}
+
+.outer-lock:active {
+  box-shadow: 0.1rem -0.1rem 20px #fada5e;
+}
+
+.hide-delete {
+  display: none;
+}
+
+@media (max-width: 845px) {
+  .card-lock {
+    position: static;
+  }
+}
