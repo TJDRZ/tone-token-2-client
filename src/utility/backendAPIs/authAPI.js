@@ -1,6 +1,8 @@
+import url from "./APIURL";
+
 const registerUser = async (email, password) => {
   try {
-    const res = await fetch(`/api/user`, {
+    const res = await fetch(`${url}/api/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +22,7 @@ const registerUser = async (email, password) => {
 
 const loginUser = async (email, password) => {
   try {
-    const res = await fetch(`/api/user/login`, {
+    const res = await fetch(`${url}/api/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +42,7 @@ const loginUser = async (email, password) => {
 
 const getUser = async (token) => {
   try {
-    const res = await fetch(`/api/user/current`, {
+    const res = await fetch(`${url}/api/user/current`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

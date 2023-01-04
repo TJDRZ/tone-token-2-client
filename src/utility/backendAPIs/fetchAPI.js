@@ -1,10 +1,11 @@
 import { getUser } from "./authAPI";
+import url from "./APIURL";
 
 const apiGet = async (type) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    const res = await fetch(`/api/${type}/${user._id}`, {
+    const res = await fetch(`${url}/api/${type}/${user._id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -22,7 +23,7 @@ const apiGetChild = async (type, parent) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    const res = await fetch(`/api/${type}/${parent}/${user._id}`, {
+    const res = await fetch(`${url}/api/${type}/${parent}/${user._id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -40,7 +41,7 @@ const apiCreate = async (item, parent) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    await fetch(`/api/${item.type}`, {
+    await fetch(`${url}/api/${item.type}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +59,7 @@ const apiNameChange = async (item) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    await fetch(`/api/${item.type}/nameChange`, {
+    await fetch(`${url}/api/${item.type}/nameChange`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +77,7 @@ const apiUpdateValue = async (item) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    await fetch(`/api/${item.type}/updateValue`, {
+    await fetch(`${url}/api/${item.type}/updateValue`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -94,7 +95,7 @@ const apiUpdateIndex = async (item) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    await fetch(`/api/${item.type}/updateIndex`, {
+    await fetch(`${url}/api/${item.type}/updateIndex`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +113,7 @@ const apiDelete = async (item) => {
   try {
     const token = localStorage.getItem("tone-token-user");
     const user = await getUser(token);
-    await fetch(`/api/${item.type}`, {
+    await fetch(`${url}/api/${item.type}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
