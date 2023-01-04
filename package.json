@@ -2,6 +2,7 @@
   "name": "tone-token",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://tjdrz.github.io/tone-token-2-client/",
   "dependencies": {
     "ansi-regex": "^6.0.1",
     "immer": "^9.0.6",
